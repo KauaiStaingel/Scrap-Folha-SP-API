@@ -53,7 +53,3 @@ def orchestrator_main():
                 raise
 
             time.sleep(2)
-
-        finally:
-            if driver:
-                driver.quit()
