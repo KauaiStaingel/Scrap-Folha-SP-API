@@ -16,7 +16,6 @@ def orchestrator_main():
     search_url = f"https://search.folha.uol.com.br/?q={encoded_query}&site=todos"
 
     while attempt < max_retries:
-        driver = None
         try:
             attempt += 1
             print(f"Tentativa {attempt} de {max_retries}")
