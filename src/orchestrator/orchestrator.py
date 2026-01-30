@@ -15,12 +15,6 @@ def orchestrator_main():
 
     search_url = f"https://search.folha.uol.com.br/?q={encoded_query}&site=todos"
 
-    context = {
-        "search_url": search_url,
-        "headless": True,
-        "timeout_seconds": 15,
-    }
-
     while attempt < max_retries:
         driver = None
         try:
@@ -49,7 +43,7 @@ def orchestrator_main():
             saver = CsvNewsSaver(noticias)
             saver.save("noticias.csv")
 
-            return context
+            return 
 
         except Exception as e:
             print(f"Erro na tentativa {attempt}: {e}")
